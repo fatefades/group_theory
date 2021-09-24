@@ -1,0 +1,39 @@
+\documentclass[12pt, a4paper, titlepage]{ctexbook}
+\usepackage{amsmath, amssymb, bm, graphicx, hyperref, mathrsfs, geometry}
+% 1.2*1.25=1.5倍行距
+\linespread{1.25}
+% word的A4纸张页边距
+\geometry{left=1.25in,right=1.25in,top=1in,bottom=1in}
+% 超链接颜色
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue}
+% 导入字体
+\newfontfamily\Zapfino{Zapfino Four.TTF}
+% 标题页信息
+\title{\fontsize{100}{0} \Zapfino Group Theory}
+\author{\fontsize{30}{0} \Zapfino NingZhuan}
+\date{}
+% 定理环境
+\newtheorem{definition}{定义}[chapter]
+\newtheorem{theorem}{定理}[chapter]
+\newtheorem{proposition}{命题}[chapter]
+\newtheorem{corollary}{推论}[chapter]
+\newtheorem{property}{性质}[chapter]
+\newtheorem{example}{例}[chapter]
+
+\begin{document}
+% 标题页
+\maketitle
+% 目录页
+\tableofcontents
+\newpage
+
+% 前言
+\frontmatter
+\input{tex/chapter_0}
+
+% 正文
+\mainmatter
+\input{tex/chapter_1}
+\input{tex/chapter_2}
+
+\end{document}
