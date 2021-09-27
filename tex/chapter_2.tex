@@ -1,11 +1,36 @@
 \chapter{群的基本概念}
 \section{群的相关概念}
-\begin{theorem}[群]
+\begin{definition}[群]
     集合$G$中有二元运算，并且满足如下四条群公理，则称为群：
     \begin{enumerate}
-        \item 封闭性
-        \item 结合律
-        \item 恒元
-        \item 逆元
+        \item 封闭性：$\forall R,S\in G,\quad RS\in G$
+        \item 结合律：$\forall R,S,T\in G,\quad R(ST)=(RS)T$
+        \item 恒元：$\exists E\in G,\forall R\in G,\quad ER=R$
+        \item 逆元：$\forall R\in G,\exists R^{-1}\in G,\quad R^{-1}R=E$
     \end{enumerate}
 \end{theorem}
+在群的定义中，对恒元和逆元只要求左乘成立，但其实从此定义出发可以证明，上述性质在右乘时也成立：
+\begin{property}[恒元和逆元的右乘]
+    \indent
+    \begin{itemize}
+        \item $ER=RE=R$
+        \item $R^{-1}R=RR^{-1}=E$
+    \end{itemize}
+\end{property}
+由此出发可以证明群中恒元和逆元的唯一性：
+\begin{property}[恒元和逆元的唯一性]
+    \indent
+    \begin{itemize}
+        \item 恒元唯一性：若$TR=R$，则$T=E$
+        \item 逆元唯一性：若$TR=E$，则$T=R^{-1}$
+    \end{itemize}
+\end{property}
+关于幂运算，还有如下性质
+\begin{property}[幂运算]
+    \indent
+    \begin{itemize}
+        \item $(RS)^{-1}=S^{-1}R^{-1}$
+        \item $R^mR^n=R^{m+n}$
+        \item $(R^m)^n=R^{mn}$
+    \end{itemize}
+\end{property}
