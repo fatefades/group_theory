@@ -1,0 +1,8 @@
+# LaTeX
+
+*.aux
+*.log
+*.out
+*.gz
+*.thm
+*.toc
